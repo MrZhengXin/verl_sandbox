@@ -191,9 +191,9 @@ class PrimeRewardManager:
                 )
                 print("[prompt]", prompt_str)
 
-                print("[response]", sequences_str[:3])
+                print("[response]", sequences_str[i])
                 print("[ground_truth]", ground_truth[i])
-                print("[score]", scores[:3])
+                print("[score]", scores[i])
 
         if return_dict:
             return {

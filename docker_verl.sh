@@ -1,0 +1,1 @@
+docker run --name verl_zhengxin --privileged --volume /mnt/data1/:/mnt/data1/ --gpus all --net=host --shm-size="10g" --cap-add=SYS_ADMIN -it hiyouga/verl:ngc-th2.6.0-cu126-vllm0.8.4-flashinfer0.2.2-cxx11abi0 bash

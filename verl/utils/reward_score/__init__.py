@@ -16,7 +16,7 @@
 from verl.utils.import_utils import deprecated
 
 
-def default_compute_score(data_source, solution_str, ground_truth, extra_info=None, sandbox_fusion_url=None, concurrent_semaphore=None):
+def default_compute_score(data_source, solution_str, ground_truth, extra_info=None, sandbox_fusion_url="http://10.0.1.5:8081/common_evaluate_batch", concurrent_semaphore=None):
     """Compute the score for a given solution based on the data source.
 
     Args:
@@ -62,7 +62,7 @@ def default_compute_score(data_source, solution_str, ground_truth, extra_info=No
         from . import prime_math
 
         res = prime_math.compute_score(solution_str, ground_truth)
-    elif data_source in ["codecontests", "apps", "codeforces", "taco"]:
+    elif data_source in ["code_contests", "codecontests", "apps", "codeforces", "taco", "LiveCodeBench"]:
         # Use the passed sandbox_fusion_url if available
         if sandbox_fusion_url:
             from . import sandbox_fusion

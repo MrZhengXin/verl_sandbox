@@ -15,7 +15,7 @@
 import asyncio
 from concurrent.futures import ProcessPoolExecutor, ThreadPoolExecutor
 from functools import partial
-from typing import Callable, Optional
+from typing import Any, Callable, Optional
 from collections import defaultdict
 
 import psutil
